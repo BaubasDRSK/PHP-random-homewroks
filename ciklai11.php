@@ -30,7 +30,7 @@ for ($x=1; $x<=50; $x++ ){
     } while (strpos($skaiciai, $skaicius));
     $skaiciai .= " $skaicius";
 }
-echo $skaiciai;
+echo $skaiciai; //pirma dalis uzduoties atspausdinta
 
 $skaiciai2 = '';
 $skaicius_txt = '';
@@ -61,7 +61,7 @@ for ($y=1; $y<strlen($skaiciai); $y++){
         $isPrime = true;
     }
     
-}
+}  //atrinkti naturalieji skaiciai
 
 $skaiciai_temp = explode(" ", $skaiciai2);
 sort($skaiciai_temp);
