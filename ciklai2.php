@@ -172,6 +172,7 @@ for ($i=1; $i <=10; $i++){
 }
 echo"<pre>";
 var_dump($arr8);
+echo"</pre>";
 
 //// 9999
 $sums = [0];
@@ -190,3 +191,31 @@ sort($sums);
 
 echo "<br>";
 echo implode(" ", $sums);
+echo "<br>";
+
+
+////10 10 10 10 
+$bigArr = [];
+$smallArr = [];
+$itemArr = [];
+$simboliai = ['#','%','+','*','@','裡'];
+$rand = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f');
+    
+for ($i = 1; $i <= 10; $i++){
+    for ($e = 1; $e <= 10; $e++){
+        $item["value"] = $simboliai[array_rand($simboliai,1)];
+        $item["color"] = '#'.$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)];
+        $smallArr[] = ["value"=>$item["value"],"color"=> $item["color"]];
+    }
+    $bigArr[] = $smallArr;
+    $smallArr = [];
+}
+
+foreach ($bigArr as $small){
+    echo "<p style='height:8px'>";
+    foreach($small as $itm){
+        echo "<span style='display: inline-block; width: 20px; height: 20px; color:".$itm['color']."'>".$itm['value']."</span>";
+    }
+    echo "</p>";
+}
+
