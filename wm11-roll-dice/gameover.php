@@ -37,6 +37,10 @@ $winnerScore= $score1 >= $score2 ? $score1 : $score2;
             <p>Player1: <?=$name1 ?>, with score: <?=$score1 ?></p>
             <p>Player2: <?=$name2 ?>, with score: <?=$score2 ?></p>
         </div>
+        <form action="index.php" method="get">
+            <button type="submit">RESTART</button>
+        </form>
+    
     </div>
 </head>
 <body>
