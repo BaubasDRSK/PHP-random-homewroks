@@ -26,6 +26,7 @@ $_SESSION['isItRolled'] = 1;
 <body>
 
     <div class="center-wrapper">
+        <img class='startimg' src="./startImage.webp" alt="dice image">
         <form class='beginningForm' action="game.php" method="post">
             <input type="text" name="name1" placeholder="Input player one name">
             <input type="text" name="name2" placeholder="Input player two name">
