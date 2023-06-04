@@ -20,17 +20,16 @@
 <body>
 <?php
 
-    $galas = rand(3000, 4000);
-    $kablelis = false;
+    
 
 
 
     echo "<div class='skaiciai' styel='width:100vw;'>";
-    
-    for ($x = 1; $x <= 100; $x++) {
+    $sqrSide = 50;
+    for ($x = 1; $x <= $sqrSide; $x++) {
         echo "<p>";
-        for ($y = 1; $y <= 100; $y++) {
-            if ($y === $x || $y === 101-$x){
+        for ($y = 1; $y <= $sqrSide; $y++) {
+            if ($y === $x || $y === $sqrSide + 1 - $x){
                 echo "<i style='color:red;'>*</i>";
             } else {
                 echo "<i>*</i>";
@@ -39,9 +38,9 @@
         }
         echo "</p>";
         }
-
-    echo "</p>";
+    
     echo "</div>";    
+    echo "<br>";
     
 ?>
 </body>
